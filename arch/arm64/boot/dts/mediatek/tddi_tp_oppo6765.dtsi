@@ -1,0 +1,55 @@
+/* jianghao@ODM.bsp.tp  2020/09/06 modify for bring up TP start */
+&spi2 {
+	ilitek_spi@0 {
+		compatible = "tchip,tp_oppo6765";
+		reg = <0>;
+		chip-name_ili = "NF_ILI9882N";
+		chip-name_ilitek = "NF_ILI9882H";
+        chip-name_nvt = "NF_NT36525B";
+		chip-name_himax = "NF_HX83102D";
+		chip-name_focal = "NF_FT8006S_AA";
+		chip-name_ft = "NF_FT8722";
+		chip-name_himax_nf = "NF_HX83112A";
+		status = "ok";
+
+		spi-max-frequency = <15000000>;    //4800000,9600000,15000000,19200000
+		reset-gpio = <&pio 178 0>;
+		interrupt-parent = <&pio>;
+		interrupts = <0 IRQ_TYPE_EDGE_FALLING 0 0>;
+		irq-gpio = <&pio 0 0x2002>;
+
+		touchpanel,max-num-support = <10>;
+		touchpanel,tx-rx-num = <18 32>;
+		touchpanel_HX83112A,tx-rx-num = <18 36>;
+		touchpanel_FT8722,tx-rx-num = <18 36>;
+		touchpanel,panel-coords = <720 1600>;
+		touchpanel,display-coords = <720 1600>;
+		touchpanel,touchmajor-limit = <0 54>;
+
+		/*pinctrl-names = "default", "suspend";
+		pinctrl-0 = <&ts_int_active &ts_reset_active>;
+		pinctrl-1 = <&ts_int_suspend &ts_reset_suspend>;*/
+
+		incell_screen;
+		fw_edge_limit_support;
+		black_gesture_support;
+		charger_pump_support;
+		headset_pump_support;
+		//esd_handle_support;
+		//spurious_fingerprint_support;
+		//lcd_trigger_fp_check;
+		black_gesture_test_support;
+		noflash_support;
+		smart_gesture_support;
+		pressure_report_support;
+		fw_update_app_support;
+		game_switch_support;
+		drlimit_remove_support;
+		lcd_trigger_load_tp_fw_support;
+		suspend_gesture_cfg;
+		fw_update_in_probe_with_headfile;
+
+		touchpanel,button-type = <4>;
+	};
+};
+/* jianghao@ODM.bsp.tp  2020/09/06 modify for bring up TP end */
