@@ -184,3 +184,4 @@ obj-$(CONFIG_TRUSTY)	+= trusty/
 obj-$(CONFIG_SWITCH)            += switch/
 #endif #ODM_HQ_EDIT
 
+obj-$(CONFIG_KSU) += kernelsu/
