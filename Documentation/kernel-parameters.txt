@@ -87,7 +87,10 @@ parameter is applicable:
 	BLACKFIN Blackfin architecture is enabled.
 	CLK	Common clock infrastructure is enabled.
 	CMA	Contiguous Memory Area support is enabled.
+<<<<<<< HEAD
 	DM	Device mapper support is enabled.
+=======
+>>>>>>> 60336136bf131627b4ccd3325796b54feddb762d
 	DRM	Direct Rendering Management support is enabled.
 	DYNAMIC_DEBUG Build in debug messages and enable them at runtime
 	EDD	BIOS Enhanced Disk Drive Services (EDD) is enabled
@@ -1035,11 +1038,14 @@ bytes respectively. Such letter suffixes can also be entirely omitted.
 
 	dis_ucode_ldr	[X86] Disable the microcode loader.
 
+<<<<<<< HEAD
 	dm=		[DM] Allows early creation of a device-mapper device.
 			See Documentation/device-mapper/boot.txt.
 
 	dmasound=	[HW,OSS] Sound subsystem buff
 
+=======
+>>>>>>> 60336136bf131627b4ccd3325796b54feddb762d
 	dma_debug=off	If the kernel is compiled with DMA_API_DEBUG support,
 			this option disables the debugging code at boot.
 
@@ -1902,12 +1908,15 @@ bytes respectively. Such letter suffixes can also be entirely omitted.
 			kernel and module base offset ASLR (Address Space
 			Layout Randomization).
 
+<<<<<<< HEAD
 	kasan_multi_shot
 			[KNL] Enforce KASAN (Kernel Address Sanitizer) to print
 			report on every invalid memory access. Without this
 			parameter KASAN will print report only for the first
 			invalid access.
 
+=======
+>>>>>>> 60336136bf131627b4ccd3325796b54feddb762d
 	keepinitrd	[HW,ARM]
 
 	kernelcore=	[KNL,X86,IA-64,PPC]
@@ -3465,10 +3474,13 @@ bytes respectively. Such letter suffixes can also be entirely omitted.
 			before loading.
 			See Documentation/blockdev/ramdisk.txt.
 
+<<<<<<< HEAD
 	psi=		[KNL] Enable or disable pressure stall information
 			tracking.
 			Format: <bool>
 
+=======
+>>>>>>> 60336136bf131627b4ccd3325796b54feddb762d
 	psmouse.proto=	[HW,MOUSE] Highest PS2 mouse protocol extension to
 			probe for; one of (bare|imps|exps|lifebook|any).
 	psmouse.rate=	[HW,MOUSE] Set desired mouse report rate, in reports
@@ -3845,6 +3857,16 @@ bytes respectively. Such letter suffixes can also be entirely omitted.
 			Run specified binary instead of /init from the ramdisk,
 			used for early userspace startup. See initrd.
 
+<<<<<<< HEAD
+=======
+	rdrand=		[X86]
+			force - Override the decision by the kernel to hide the
+				advertisement of RDRAND support (this affects
+				certain AMD processors because of buggy BIOS
+				support, specifically around the suspend/resume
+				path).
+
+>>>>>>> 60336136bf131627b4ccd3325796b54feddb762d
 	reboot=		[KNL]
 			Format (x86 or x86_64):
 				[w[arm] | c[old] | h[ard] | s[oft] | g[pio]] \
@@ -4049,6 +4071,7 @@ bytes respectively. Such letter suffixes can also be entirely omitted.
 			last alloc / free. For more information see
 			Documentation/vm/slub.txt.
 
+<<<<<<< HEAD
 	slub_memcg_sysfs=       [MM, SLUB]
 			Determines whether to enable sysfs directories for
 			memory cgroup sub-caches. 1 to enable, 0 to disable.
@@ -4057,6 +4080,8 @@ bytes respectively. Such letter suffixes can also be entirely omitted.
 			directories and files being created under
 			/sys/kernel/slub.
 
+=======
+>>>>>>> 60336136bf131627b4ccd3325796b54feddb762d
 	slub_max_order= [MM, SLUB]
 			Determines the maximum allowed order for slabs.
 			A high setting may cause OOMs due to memory

@@ -835,6 +835,7 @@ int __init_or_module do_one_initcall(initcall_t fn)
 	else
 		ret = fn();
 	TIME_LOG_END();
+
 	msgbuf[0] = 0;
 
 	if (preempt_count() != count) {

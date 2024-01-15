@@ -9,7 +9,11 @@ Required properties:
 
 Required nodes:
 - display: Phandle to a display node as described in
+<<<<<<< HEAD
 	Documentation/devicetree/bindings/display/panel/display-timing.txt
+=======
+	Documentation/devicetree/bindings/display/display-timing.txt
+>>>>>>> 60336136bf131627b4ccd3325796b54feddb762d
 	Additional, the display node has to define properties:
 	- bits-per-pixel: Bits per pixel
 	- fsl,pcr: LCDC PCR value

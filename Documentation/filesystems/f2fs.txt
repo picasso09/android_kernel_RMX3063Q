@@ -125,9 +125,12 @@ active_logs=%u         Support configuring the number of active logs. In the
 disable_ext_identify   Disable the extension list configured by mkfs, so f2fs
                        does not aware of cold files such as media files.
 inline_xattr           Enable the inline xattrs feature.
+<<<<<<< HEAD
 noinline_xattr         Disable the inline xattrs feature.
 inline_xattr_size=%u   Support configuring inline xattr size, it depends on
 		       flexible inline xattr feature.
+=======
+>>>>>>> 60336136bf131627b4ccd3325796b54feddb762d
 inline_data            Enable the inline data feature: New created small(<~3.4k)
                        files can be written into inode block.
 inline_dentry          Enable the inline dir feature: data in new created
@@ -157,6 +160,7 @@ noinline_data          Disable the inline data feature, inline data feature is
                        enabled by default.
 data_flush             Enable data flushing before checkpoint in order to
                        persist data of regular and symlink.
+<<<<<<< HEAD
 fault_injection=%d     Enable fault injection in all supported types with
                        specified injection rate.
 fault_type=%d          Support configuring fault injection type, should be
@@ -219,6 +223,11 @@ checkpoint=%s          Set to "disable" to turn off checkpointing. Set to "enabl
                        disabled, any unmounting or unexpected shutdowns will cause
                        the filesystem contents to appear as they did when the
                        filesystem was mounted with that option.
+=======
+mode=%s                Control block allocation mode which supports "adaptive"
+                       and "lfs". In "lfs" mode, there should be no random
+                       writes towards main area.
+>>>>>>> 60336136bf131627b4ccd3325796b54feddb762d
 
 ================================================================================
 DEBUGFS ENTRIES
@@ -264,6 +273,7 @@ Files in /sys/fs/f2fs/<devname>
                               gc_idle = 1 will select the Cost Benefit approach
                               & setting gc_idle = 2 will select the greedy approach.
 
+<<<<<<< HEAD
  gc_urgent                    This parameter controls triggering background GCs
                               urgently or not. Setting gc_urgent = 0 [default]
                               makes back to default behavior, while if it is set
@@ -273,6 +283,8 @@ Files in /sys/fs/f2fs/<devname>
  gc_urgent_sleep_time         This parameter controls sleep time for gc_urgent.
                               500 ms is set by default. See above gc_urgent.
 
+=======
+>>>>>>> 60336136bf131627b4ccd3325796b54feddb762d
  reclaim_segments             This parameter controls the number of prefree
                               segments to be reclaimed. If the number of prefree
 			      segments is larger than the number of segments

@@ -28,7 +28,10 @@ Contents:
 2.3  Userspace
 2.4  Ondemand
 2.5  Conservative
+<<<<<<< HEAD
 2.6  Interactive
+=======
+>>>>>>> 60336136bf131627b4ccd3325796b54feddb762d
 
 3.   The Governor Interface in the CPUfreq Core
 
@@ -219,6 +222,7 @@ a decision on when to decrease the frequency while running in any
 speed. Load for frequency increase is still evaluated every
 sampling rate.
 
+<<<<<<< HEAD
 2.6 Interactive
 ---------------
 
@@ -304,6 +308,8 @@ timer_slack is 10000uS then timers will be deferred for up to 30msec
 when not at lowest speed.  A value of -1 means defer timers
 indefinitely at all speeds.  Default is 80000 uS.
 
+=======
+>>>>>>> 60336136bf131627b4ccd3325796b54feddb762d
 3. The Governor Interface in the CPUfreq Core
 =============================================
 

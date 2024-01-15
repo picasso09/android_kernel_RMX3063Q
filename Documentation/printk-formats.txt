@@ -31,6 +31,7 @@ return from vsnprintf.
 Raw pointer value SHOULD be printed with %p. The kernel supports
 the following extended format specifiers for pointer types:
 
+<<<<<<< HEAD
 Pointer Types:
 
 Pointers printed without a specifier extension (i.e unadorned %p) are
@@ -40,6 +41,8 @@ want the address see %px below.
 
 	%p	abcdef12 or 00000000abcdef12
 
+=======
+>>>>>>> 60336136bf131627b4ccd3325796b54feddb762d
 Symbols/Function Pointers:
 
 	%pF	versatile_init+0x0/0x110
@@ -67,12 +70,17 @@ Symbols/Function Pointers:
 
 Kernel Pointers:
 
+<<<<<<< HEAD
 	%pK	01234567 or 0123456789abcdef
+=======
+	%pK	0x01234567 or 0x0123456789abcdef
+>>>>>>> 60336136bf131627b4ccd3325796b54feddb762d
 
 	For printing kernel pointers which should be hidden from unprivileged
 	users. The behaviour of %pK depends on the kptr_restrict sysctl - see
 	Documentation/sysctl/kernel.txt for more details.
 
+<<<<<<< HEAD
 Unmodified Addresses:
 
 	%px	01234567 or 0123456789abcdef
@@ -85,6 +93,8 @@ Unmodified Addresses:
 	handles printing pointers it will be nice to be able to find the call
 	sites.
 
+=======
+>>>>>>> 60336136bf131627b4ccd3325796b54feddb762d
 Struct Resources:
 
 	%pr	[mem 0x60000000-0x6fffffff flags 0x2200] or

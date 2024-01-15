@@ -21,7 +21,11 @@ The device node can contain one 'port' child node with one child
 'endpoint' node, according to the bindings defined in [2]. This
 node should describe panel's video bus.
 
+<<<<<<< HEAD
 [1]: Documentation/devicetree/bindings/display/panel/display-timing.txt
+=======
+[1]: Documentation/devicetree/bindings/display/display-timing.txt
+>>>>>>> 60336136bf131627b4ccd3325796b54feddb762d
 [2]: Documentation/devicetree/bindings/media/video-interfaces.txt
 
 Example:

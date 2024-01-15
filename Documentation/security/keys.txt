@@ -1151,6 +1151,7 @@ access the data:
      usage.  This is called key->payload.rcu_data0.  The following accessors
      wrap the RCU calls to this element:
 
+<<<<<<< HEAD
      (a) Set or change the first payload pointer:
 
 		rcu_assign_keypointer(struct key *key, void *data);
@@ -1166,6 +1167,10 @@ access the data:
      (c) Read the first payload pointer with the RCU read lock held:
 
 		const void *dereference_key_rcu(const struct key *key);
+=======
+	rcu_assign_keypointer(struct key *key, void *data);
+	void *rcu_dereference_key(struct key *key);
+>>>>>>> 60336136bf131627b4ccd3325796b54feddb762d
 
 
 ===================

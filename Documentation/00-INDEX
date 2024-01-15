@@ -436,8 +436,11 @@ sysrq.txt
 	- info on the magic SysRq key.
 target/
 	- directory with info on generating TCM v4 fabric .ko modules
+<<<<<<< HEAD
 tee.txt
 	- info on the TEE subsystem and drivers
+=======
+>>>>>>> 60336136bf131627b4ccd3325796b54feddb762d
 this_cpu_ops.txt
 	- List rationale behind and the way to use this_cpu operations.
 thermal/

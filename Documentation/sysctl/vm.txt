@@ -30,7 +30,10 @@ Currently, these files are in /proc/sys/vm:
 - dirty_writeback_centisecs
 - drop_caches
 - extfrag_threshold
+<<<<<<< HEAD
 - extra_free_kbytes
+=======
+>>>>>>> 60336136bf131627b4ccd3325796b54feddb762d
 - hugepages_treat_as_movable
 - hugetlb_shm_group
 - laptop_mode
@@ -241,6 +244,7 @@ fragmentation index is <= extfrag_threshold. The default value is 500.
 
 ==============================================================
 
+<<<<<<< HEAD
 extra_free_kbytes
 
 This parameter tells the VM to keep extra free memory between the threshold
@@ -256,6 +260,8 @@ related latencies.
 
 ==============================================================
 
+=======
+>>>>>>> 60336136bf131627b4ccd3325796b54feddb762d
 hugepages_treat_as_movable
 
 This parameter controls whether we can allocate hugepages from ZONE_MOVABLE

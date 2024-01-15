@@ -38,7 +38,11 @@ Optional Properties:
 		Can be used in case timings cannot be provided otherwise
 		or to override timings provided by the panel.
 
+<<<<<<< HEAD
 [1]: Documentation/devicetree/bindings/display/panel/display-timing.txt
+=======
+[1]: Documentation/devicetree/bindings/display/display-timing.txt
+>>>>>>> 60336136bf131627b4ccd3325796b54feddb762d
 
 Example:
 
