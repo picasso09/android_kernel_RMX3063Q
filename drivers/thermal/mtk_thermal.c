@@ -212,7 +212,7 @@ struct mtk_thermal {
 };
 
 /* MT8173 thermal sensor data */
-const int mt8173_bank_data[MT8173_NUM_ZONES][3] = {
+static const int mt8173_bank_data[MT8173_NUM_ZONES][3] = {
 	{ MT8173_TS2, MT8173_TS3 },
 	{ MT8173_TS2, MT8173_TS4 },
 	{ MT8173_TS1, MT8173_TS2, MT8173_TSABB },
@@ -706,7 +706,6 @@ static int mtk_thermal_probe(struct platform_device *pdev)
 	struct mtk_thermal *mt;
 	struct resource *res;
 	const struct of_device_id *of_id;
-	u64 auxadc_phys_base, apmixed_phys_base;
 	struct thermal_zone_device *tzdev;
 
 	mt = devm_kzalloc(&pdev->dev, sizeof(*mt), GFP_KERNEL);

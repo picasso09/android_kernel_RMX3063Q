@@ -107,7 +107,7 @@ static int palmas_rtc_read_time(struct device *dev, struct rtc_time *tm)
 	tm->tm_hour = bcd2bin(rtc_data[2]);
 	tm->tm_mday = bcd2bin(rtc_data[3]);
 	tm->tm_mon = bcd2bin(rtc_data[4]) - 1;
-	tm->tm_year = bcd2bin(rtc_data[5]) + 100;
+	tm->tm_year = year_bcd2bin(rtc_data[5]);
 
 	return ret;
 }
@@ -123,7 +123,7 @@ static int palmas_rtc_set_time(struct device *dev, struct rtc_time *tm)
 	rtc_data[2] = bin2bcd(tm->tm_hour);
 	rtc_data[3] = bin2bcd(tm->tm_mday);
 	rtc_data[4] = bin2bcd(tm->tm_mon + 1);
-	rtc_data[5] = bin2bcd(tm->tm_year - 100);
+	rtc_data[5] = year_bin2bcd(tm->tm_year);
 
 	/* Stop RTC while updating the RTC time registers */
 	ret = palmas_update_bits(palmas, PALMAS_RTC_BASE, PALMAS_RTC_CTRL_REG,
@@ -178,7 +178,7 @@ static int palmas_rtc_read_alarm(struct device *dev, struct rtc_wkalrm *alm)
 	alm->time.tm_hour = bcd2bin(alarm_data[2]);
 	alm->time.tm_mday = bcd2bin(alarm_data[3]);
 	alm->time.tm_mon = bcd2bin(alarm_data[4]) - 1;
-	alm->time.tm_year = bcd2bin(alarm_data[5]) + 100;
+	alm->time.tm_year = year_bcd2bin(alarm_data[5]);
 
 	ret = palmas_read(palmas, PALMAS_RTC_BASE, PALMAS_RTC_INTERRUPTS_REG,
 			&int_val);
@@ -209,7 +209,7 @@ static int palmas_rtc_set_alarm(struct device *dev, struct rtc_wkalrm *alm)
 	alarm_data[2] = bin2bcd(alm->time.tm_hour);
 	alarm_data[3] = bin2bcd(alm->time.tm_mday);
 	alarm_data[4] = bin2bcd(alm->time.tm_mon + 1);
-	alarm_data[5] = bin2bcd(alm->time.tm_year - 100);
+	alarm_data[5] = year_bin2bcd(alm->time.tm_year);
 
 	ret = palmas_bulk_write(palmas, PALMAS_RTC_BASE,
 		PALMAS_ALARM_SECONDS_REG, alarm_data, PALMAS_NUM_TIME_REGS);

@@ -61,7 +61,7 @@ static ssize_t power_supply_show_property(struct device *dev,
 #endif /*ODM_HQ_EDIT*/
 	};
 	static char *health_text[] = {
-		"Unknown", "Baik", "kepanasan", "Dead", "Over voltage",
+		"Unknown", "Good", "Overheat", "Dead", "Over voltage",
 		"Unspecified failure", "Cold", "Watchdog timer expire",
 		"Safety timer expire"
 	};

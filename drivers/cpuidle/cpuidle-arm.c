@@ -128,14 +128,14 @@ static int __init arm_idle_init(void)
 
 		if (ret) {
 			pr_err("CPU %d failed to init idle CPU ops\n", cpu);
-			goto out_fail;
+			goto out_unregister_drv;
 		}
 
 		dev = kzalloc(sizeof(*dev), GFP_KERNEL);
 		if (!dev) {
 			pr_err("Failed to allocate cpuidle device\n");
 			ret = -ENOMEM;
-			goto out_fail;
+			goto out_unregister_drv;
 		}
 		dev->cpu = cpu;
 
@@ -143,8 +143,7 @@ static int __init arm_idle_init(void)
 		if (ret) {
 			pr_err("Failed to register cpuidle device for CPU %d\n",
 			       cpu);
-			kfree(dev);
-			goto out_fail;
+			goto out_kfree_dev;
 		}
 	}
 

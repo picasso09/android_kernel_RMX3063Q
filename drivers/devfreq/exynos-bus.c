@@ -391,7 +391,6 @@ static int exynos_bus_probe(struct platform_device *pdev)
 	struct exynos_bus *bus;
 	int ret, max_state;
 	unsigned long min_freq, max_freq;
-	bool passive = false;
 
 	if (!np) {
 		dev_err(dev, "failed to find devicetree node\n");
@@ -515,9 +514,6 @@ out:
 err:
 	dev_pm_opp_of_remove_table(dev);
 	clk_disable_unprepare(bus->clk);
-err_reg:
-	if (!passive)
-		regulator_disable(bus->regulator);
 
 	return ret;
 }

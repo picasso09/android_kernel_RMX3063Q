@@ -23,12 +23,6 @@
  * Using this limit prevents one virtqueue from starving others. */
 #define VHOST_TEST_WEIGHT 0x80000
 
-/* Max number of packets transferred before requeueing the job.
- * Using this limit prevents one virtqueue from starving others with
- * pkts.
- */
-#define VHOST_TEST_PKT_WEIGHT 256
-
 enum {
 	VHOST_TEST_VQ = 0,
 	VHOST_TEST_VQ_MAX = 1,
